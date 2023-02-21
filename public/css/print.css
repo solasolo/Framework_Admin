@@ -1,0 +1,48 @@
+@page {
+    size: A4 landscape;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: darkgrey;
+}
+
+table, td, tr, thead, th {
+    border-collapse: collapse;
+    border:1px solid black; 
+}
+
+.Page {
+    position: relative;
+    background-color: white;
+    width: 297mm;
+    height: calc(210mm - 5mm);
+    margin: 0;
+    padding-top: 10mm;
+    padding-left: 10mm;
+    border: 0.2mm dashed gray;
+
+    page-break-after: always;
+}
+
+.print_control {
+    position: fix;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+@media print {
+    .print_control {
+        display: none;
+        visibility: hidden;
+    }
+}
